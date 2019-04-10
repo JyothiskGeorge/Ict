@@ -1,0 +1,19 @@
+const express=require('express');
+const handlebars =require('express-handlebars');
+var app=express();
+
+app.engine('handlebars',handlebars());
+app.engine('view engine','handlebars');
+
+app.get('/',(req,res)=>{
+res.send("Hello");
+});
+
+
+app.get('/home',(req,res)=>{
+    res.send("welcome");
+    });
+    app.get('/contact',(req,res)=>{
+        res.send("<h1> hai </h1>");
+        });
+app.listen(4000);
